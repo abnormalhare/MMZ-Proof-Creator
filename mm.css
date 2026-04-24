@@ -1,0 +1,57 @@
+body {
+    font-family: Arial, sans-serif;
+}
+
+.category {
+    margin: 10px 0;
+}
+
+.theorem {
+    margin: 5px 0;
+    padding: 5px;
+    background: #f0f0f0;
+}
+
+details {
+    margin: 10px 0;
+}
+
+form {
+    margin: 20px 0;
+    padding: 10px;
+    border: 1px solid #ccc;
+}
+
+input, button {
+    margin: 5px;
+}
+
+.code-font {
+    font-family: 'Fira Code', monospace;
+    font-size: small;
+}
+
+/* theorem highlighting */
+
+.mm-theorem {
+    color: #d94835;
+    font-weight: bold;
+}
+
+.mm-type {
+    color: #dacb76;
+}
+
+.mm-wff {
+    color: #159f6a;
+}
+
+.mm-equal {
+    color: #650fdd;
+    font-weight: bold;
+    font-style: italic;
+}
+
+.mm-proof {
+    color: #ae87e6;
+}

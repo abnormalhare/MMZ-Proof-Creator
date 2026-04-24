@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Metamath Zero Theorem Manager</title>
+    <link rel="stylesheet" href="mm.css">
+    <script src="mm.js"></script>
+</head>
+<body>
+    <h1>Metamath Zero Theorems</h1>
+    <p>Note: To load theorems dynamically, serve this file with a local server (e.g., python -m http.server) and open in browser.</p>
+    <div id="theorems"></div>
+
+    <button onclick="addCategory()">Add Category</button>
+    <button onclick="addProof()">Add Proof</button>
+
+    <div id="addCategoryForm" style="display:none;">
+        <h2>Add New Category</h2>
+        <input type="text" id="newCategoryName" placeholder="Category name (e.g., 1_2_7)">
+        <button onclick="createCategory()">Create</button>
+    </div>
+
+    <div id="addProofForm" style="display:none;">
+        <h2>Add New Proof</h2>
+        <select id="proofCategory">
+        </select>
+        <br>
+        Theorem Name: <input type="text" id="theoremName"><br>
+        Number of wffs: <input type="number" id="numWffs" min="1" max="12"><br>
+        <div id="wffNames"></div>
+        <button onclick="generateWffInputs()">Set Wffs</button><br>
+        Number of Hypotheses: <input type="number" id="numHyps" min="0"><br>
+        <div id="hypInputs"></div>
+        <button onclick="generateHypInputs()">Set Hypotheses</button><br>
+        Conclusion: <textarea rows="1" cols="50" id="conclusion" class="code-font"></textarea><br>
+        Proof: <textarea id="proof" rows="1" cols="80"></textarea><br>
+        <button onclick="generateTheorem()">Generate Theorem</button>
+    </div>
+</body>
+</html>
+
